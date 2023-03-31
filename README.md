@@ -18,22 +18,22 @@ The [MathType filter plugin](https://github.com/wiris/moodle-filter_wiris) is re
 
 ## Installation
 
-Install the plugin like any other plugin to folder `lib/editor/tiny/plugins/mathtype`.
+Install the plugin like any other plugin to folder `lib/editor/tiny/plugins/wiris`.
 
 You can use git:
 
 ```sh
 $ cd <your-moodle-root-path>
-$ git clone https://github.com/wiris/moodle-tinymce6_wiris.git lib/editor/tiny/plugins/mathtype
+$ git clone https://github.com/wiris/moodle-tinymce6_wiris.git lib/editor/tiny/plugins/wiris
 ```
 
 > TODO: modify the download link
 
-Alternatively, you can [download the plugin](https://github.com/wiris/moodle-tinymce_tiny_mce_wiris/archive/stable.zipx) and unzip the file into the Tiny plugins folder, and then rename the new folder to `mathtype`.
+Alternatively, you can [download the plugin](https://github.com/wiris/moodle-tinymce_tiny_mce_wiris/archive/stable.zipx) and unzip the file into the Tiny plugins folder, and then rename the new folder to `wiris`.
 
 ## Releases
 
-All notable changes to this project are documented in the [CHANGES.md](CHANGES.md) file. You can download any release of this plugin from the [Official Moodle's page](https://moodle.org/plugins/tiny_mathtype).
+All notable changes to this project are documented in the [CHANGES.md](CHANGES.md) file. You can download any release of this plugin from the [Official Moodle's page](https://moodle.org/plugins/tiny_wiris).
 
 ## Libraries
 

@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-namespace tiny_mathtype;
+namespace tiny_wiris;
 
 use context;
 use editor_tiny\editor;
@@ -25,7 +25,7 @@ use editor_tiny\plugin_with_buttons;
 /**
  * Tiny media plugin.
  *
- * @package    tiny_mathtype
+ * @package    tiny_wiris
  * @copyright  2022 Andrew Lyons <andrew@nicols.co.uk>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
