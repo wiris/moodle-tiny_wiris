@@ -1,4 +1,4 @@
-@editor @editor_tiny @tiny_wiris @wiris_mathtype
+@editor @editor_tiny @tiny_wiris @wiris_mathtype @tiny
 Feature: Check MathType disabled if filter disabled at course level
 In order to check if MathType will be disabled if filter is disabled at couse level
 I need to disable filter at activity course level

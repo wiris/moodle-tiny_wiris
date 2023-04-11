@@ -57,7 +57,9 @@ jobs:
           # See: https://docs.moodle.org/dev/Moodle_and_PHP
           - moodle-branch: 'master'
             php: '7.4'
-            
+          - moodle-branch: 'MOODLE_401_STABLE'
+            php: '8.0'
+
     steps:
       # 0. Initial step. Check out this repository code in ./plugin directory
       - name: Check out repository code
@@ -100,10 +102,11 @@ jobs:
           sudo locale-gen en_AU.UTF-8
           echo "NVM_DIR=$HOME/.nvm" >> $GITHUB_ENV
         env:
-          IGNORE_PATHS: classes/privacy,ignore,node_modules,integration,render
+          IGNORE_PATHS: classes,ignore,node_modules,integration,render
           COVERAGE: false
-          CODECHECKER_IGNORE_PATHS: classes/privacy,ignore,node_modules,integration,render
-          PHPUNIT_IGNORE_PATHS: classes/privacy,ignore,node_modules,integration,render
+          CODECHECKER_IGNORE_PATHS: classes,ignore,node_modules,integration,render
+          PHPUNIT_IGNORE_PATHS: classes,ignore,node_modules,integration,render
+          MOODLE_DOCKER_BEHAT_FAILDUMP: /home/runner/work/moodle-tinymce6_wiris/moodle-tinymce6_wiris/behatfaildumps
 
 
       # 3. Install Filter plugin ( and Quizzes ?)

@@ -1,4 +1,4 @@
-@editor @editor_tiny @tiny_wiris @wiris_mathtype
+@editor @editor_tiny @tiny_wiris @wiris_mathtype @tiny
 Feature: Use tiny to post with a chemistry formula
 In order to check whether a chemistry formula can be displayed correctly
 I need to post a chemistry formula
