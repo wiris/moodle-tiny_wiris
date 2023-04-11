@@ -9,7 +9,6 @@ export default new Promise(async(resolve, reject) => {
     let script = head.querySelector('script[data-mathtype="mathtype"]');
     // If plugin.min.js file is already loaded, execute the init and resolve the promise
     if (script) {
-        window.WirisPlugin.init(`${component}/plugin`);
         resolve([`${component}/plugin`, Configuration]);
     }
 
@@ -20,7 +19,6 @@ export default new Promise(async(resolve, reject) => {
     script.async = true;
 
     script.addEventListener('load', () => {
-        window.WirisPlugin.init(`${component}/plugin`);
         resolve([`${component}/plugin`, Configuration]);
     }, false);
 
