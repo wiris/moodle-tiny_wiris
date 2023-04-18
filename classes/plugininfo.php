@@ -14,7 +14,7 @@ class plugininfo extends plugin implements plugin_with_configuration {
         array $fpoptions,
         ?editor $editor = null
     ): array {
-        global $COURSE, $PAGE;
+        global $COURSE, $PAGE, $CFG;
         // We need to know if  MathType filter are active in the context of the course.
         // If not MathType for Atto should be disabled.
         $filterwirisactive = true;
@@ -46,7 +46,10 @@ class plugininfo extends plugin implements plugin_with_configuration {
         return [
             'filterEnabled' => $filterwirisactive,
             'editorEnabled' => $editorisactive,
-            'chemistryEnabled' => $chemistryisactive,   
+            'chemistryEnabled' => $chemistryisactive,
+            'moodleCourseCategory' => $COURSE->category,
+            'moodleCourseName' => $COURSE->fullname,
+            'moodleVersion' => $CFG->branch,
         ];
     }
 }
