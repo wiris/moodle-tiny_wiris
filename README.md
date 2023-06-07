@@ -24,7 +24,7 @@ You can use git:
 
 ```sh
 $ cd <your-moodle-root-path>
-$ git clone https://github.com/wiris/moodle-tinymce6_wiris.git lib/editor/tiny/plugins/wiris
+$ git clone https://github.com/wiris/moodle-tiny_wiris.git lib/editor/tiny/plugins/wiris
 ```
 
 > TODO: modify the download link
