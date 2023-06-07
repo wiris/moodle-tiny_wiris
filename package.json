@@ -1,5 +1,5 @@
 {
-  "name": "moodle-tinymce6_wiris",
+  "name": "moodle-tiny_wiris",
   "version": "8.2.2",
   "description": "Type and handwrite mathematical notation in Moodle with MathType fro TinyMCE6 Editor",
   "homepage": "https://moodle.org/plugins/tinymce_tiny_mce_wiris",
@@ -9,7 +9,6 @@
     "update-mathtype": "npx cpy 'node_modules/@wiris/mathtype-tinymce6/plugin.min.js' 'js/'"
   },
   "devDependencies": {
-    "@wiris/mathtype-tinymce5": "*8.0.0",
     "cpy-cli": "^3.1.1",
     "del-cli": "^4.0.0"
   },
