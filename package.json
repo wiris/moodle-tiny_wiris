@@ -9,7 +9,6 @@
     "update-mathtype": "npx cpy 'node_modules/@wiris/mathtype-tinymce6/plugin.min.js' 'js/'"
   },
   "devDependencies": {
-    "@wiris/mathtype-tinymce5": "*8.0.0",
     "cpy-cli": "^3.1.1",
     "del-cli": "^4.0.0"
   },

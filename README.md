@@ -62,6 +62,27 @@ $ npm install
 $ npm run update-mathtype
 ```
 
+### Update AMD module
+
+You can build all modules in Moodle by using the grunt amd command. To update the amd module from this plugin:
+1. Execute `npm install` on the root of the Moodle project.
+2. Navigate to `<moodle-root>/lib/editor/tiny/wiris/amd/` and execute:
+
+```
+$ npx grunt amd
+```
+
+### Development mode
+
+In development mode Moodle will also send the browser the corresponding source map files for each of the JavaScript modules. The source map files will tell the browser how to map the minified source code back to the un-minified original source code so that the original source files will be displayed in the sources section of the browser's development tools.
+
+To enable development mode set the cachejs config value to false in the admin settings or directly in your config.php file:
+
+```
+// Prevent JS caching
+$CFG->cachejs = false;
+```
+
 ## Further information
 
 - [Official plugin in Moodle's website](https://moodle.org/plugins/tinymce_tiny_mce_wiris).
