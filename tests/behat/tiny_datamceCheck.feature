@@ -34,7 +34,7 @@ Feature: Checks if data-mce is set on setContent
     And I set MathType formula to '<math><msqrt><mn>2</mn></msqrt></math>'
     And I press accept button in MathType Editor
     And I press "Save and display"
-    # Since the formula is inside an iframe, it's not working anymore. 
+    # Since the formula is inside an iframe, it's not working anymore.
     # And I navigate to "Settings" in current page administration
     # Then I wait until Wirisformula formula exists
     # And a Wirisformula containing "square root of 2" should exist in "Page content" field
