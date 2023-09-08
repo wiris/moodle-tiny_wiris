@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Last release of this plugin is 8.4.0 - 31th jun. 2023
 
+## Unreleased
+ - fix: MathType loading faster than TinyMCE. #KB-38924
+
 ## v8.4.0 - 31th jun. 2023
 - ci: Update how steps output are stored in Github actions.
 - fix: Moodle badge Certification Issues
