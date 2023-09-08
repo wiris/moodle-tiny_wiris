@@ -1,3 +1,5 @@
+import {getTinyMCE} from 'editor_tiny/loader';
+
 import {component} from './common';
 import * as Configuration from './configuration';
 import * as Config from 'core/config';
@@ -5,6 +7,10 @@ import * as Config from 'core/config';
 export const baseUrl = `${Config.wwwroot}/lib/editor/tiny/plugins/wiris/js`;
 
 export default new Promise(async(resolve, reject) => {
+    const [tinyMCE] = await Promise.all([
+        getTinyMCE(),
+    ]);
+
     const head = document.querySelector('head');
     let script = head.querySelector('script[data-mathtype="mathtype"]');
     // If plugin.min.js file is already loaded, execute the init and resolve the promise
