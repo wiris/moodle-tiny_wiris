@@ -7,6 +7,7 @@ import * as Config from 'core/config';
 export const baseUrl = `${Config.wwwroot}/lib/editor/tiny/plugins/wiris/js`;
 
 export default new Promise(async(resolve, reject) => {
+    // eslint-disable-next-line no-unused-vars
     const [tinyMCE] = await Promise.all([
         getTinyMCE(),
     ]);
