@@ -24,9 +24,10 @@ I need to disable filter at activity page level
       | Text editor | TinyMCE editor |
     And I press "Save changes"
     And I am on "Course 1" course homepage with editing mode on
-    And I add a "Page" to section "0"
+    And I add a "Page" to section "0" using the activity chooser
     And I set the following fields to these values:
       | Name         | Test MathType for Tinymce 6 on Moodle |
+    And I press "Toggle" in "Page content" field in TinyMCE 6 editor
     And I press "MathType" in "Page content" field in TinyMCE 6 editor
     And I set MathType formula to '<math><msqrt><mn>2</mn><mi>&#x3c0;</mi></msqrt></math>'
     And I wait "1" seconds

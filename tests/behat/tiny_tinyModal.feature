@@ -24,9 +24,10 @@ I need to post a MathType formula
       | Text editor | TinyMCE editor |
     And I press "Save changes"
     And I am on "Course 1" course homepage with editing mode on
-    And I add a "Page" to section "0"
+    And I add a "Page" to section "0" using the activity chooser
     And I set the following fields to these values:
       | Name | Test MathType for Atto on Moodle |
+    And I press "Toggle" in "Page content" field in TinyMCE 6 editor
     And I press "MathType" in "Page content" field in TinyMCE 6 editor
     And I wait "1" seconds
     And I set MathType formula to '<math><mfrac><mn>1</mn><msqrt><mn>2</mn><mi>&#x3c0;</mi></msqrt></mfrac></math>'

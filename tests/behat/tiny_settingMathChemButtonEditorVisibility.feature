@@ -28,6 +28,7 @@ and disable the mathtype and chemtype buttons
   @javascript
   Scenario: Disable chemtype and mathtype buttons and check that it is not visible in TinyMCE toolbar
     And I am on "Course 1" course homepage with editing mode on
-    And I add a "Page" to section "0"
+    And I add a "Page" to section "0" using the activity chooser
+    And I press "Toggle" in "Page content" field in TinyMCE 6 editor
     Then I check "MathType" in "Page content" field "does not" exist in TinyMCE 6 editor
     And I check "ChemType" in "Page content" field "does not" exist in TinyMCE 6 editor

@@ -26,9 +26,10 @@ Open the editor again
       | Text editor | TinyMCE editor |
     And I press "Save changes"
     And I am on "Course 1" course homepage with editing mode on
-    And I add a "Page" to section "0"
+    And I add a "Page" to section "0" using the activity chooser
     And I set the following fields to these values:
       | Name | Test MathType for Atto on Moodle |
+    And I press "Toggle" in "Page content" field in TinyMCE 6 editor
     And I press "MathType" in "Page content" field in TinyMCE 6 editor
     And I wait "2" seconds
     And I press cancel button in MathType Editor

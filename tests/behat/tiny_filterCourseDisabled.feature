@@ -24,12 +24,12 @@ I need to disable filter at activity course level
       | Text editor | TinyMCE editor |
     And I press "Save changes"
     And I am on "Course 1" course homepage with editing mode on
-    And I add a "Page" to section "0"
+    And I add a "Page" to section "0" using the activity chooser
     Then "MathType" "button" should exist
     And I am on "Course 1" course homepage
     And I navigate to "Filters" in current page administration
     And I turn MathType filter off
     And I press "Save changes"
     And I am on "Course 1" course homepage
-    And I add a "Page" to section "0"
+    And I add a "Page" to section "0" using the activity chooser
     Then "MathType" "button" should not exist

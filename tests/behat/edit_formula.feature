@@ -21,6 +21,7 @@ Feature: MathType for TinyMCE 6
       | Text editor | TinyMCE editor |
     And I press "Save changes"
     And I open my profile in edit mode
+    And I press "Toggle" in "General description" field in TinyMCE 6 editor
     And I press "MathType"
     And I wait "1" seconds
     And I set mathtype formula to "1+2"
