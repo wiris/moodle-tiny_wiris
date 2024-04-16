@@ -7,8 +7,8 @@
 # 
 # The current matrix we are using is:
 # - ubuntu-latest
-# - PHP7.1, PHP7.4, PHP8.0
-# - Moodle from 3.5 to 3.11
+# - PHP8.0, PHP8.1, PHP8.2, PHP8.3
+# - Moodle from 4.2 to latest(4.4)
 
 name: Moodle Plugin CI
 
@@ -60,7 +60,7 @@ jobs:
     steps:
       # 0. Initial step. Check out this repository code in ./plugin directory
       - name: Check out repository code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           path: plugin
 
@@ -71,16 +71,15 @@ jobs:
       # 0.2. install a specific version of Node using
       # https://github.com/actions/setup-node
       - name: Use Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: 14
+          node-version: 20
 
       # 1. Setup PHP using the matrix described on the strategy section.
       - name: Setup PHP ${{ matrix.php }}
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
-          extensions: ${{ matrix.extensions }}
           ini-values: max_input_vars=10000
           coverage: none
 
@@ -151,14 +150,6 @@ jobs:
       - name: Mustache Lint
         if: ${{ always() }}
         run: moodle-plugin-ci mustache
-
-      # - name: Grunt
-      #   if: ${{ always() }}
-      #   run: moodle-plugin-ci grunt --max-lint-warnings 0
-      #   run: moodle-plugin-ci grunt -t eslint --max-lint-warnings 0
-
-      # - name : machine ls $GITHUB_WORKSPACE moodledata2
-      #   run : "ls -la $GITHUB_WORKSPACE"
 
       # 5.4. Code testing
       # Run PHPUnit tests on Moodle3_9 only, for the moment.
