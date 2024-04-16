@@ -1,4 +1,4 @@
-@editor @editor_tiny @tiny_wiris @wiris_mathtype
+@editor @editor_tiny @tiny_wiris @tiny_wiris_current @wiris_mathtype
 Feature: Check if editor can be reopened
 In order to check if the MathType editor can be reopened
 I need to open the editor

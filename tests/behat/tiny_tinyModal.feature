@@ -1,4 +1,4 @@
-@editor @editor_tiny @tiny_wiris @wiris_mathtype
+@editor @editor_tiny @tiny_wiris @tiny_wiris_current @wiris_mathtype
 Feature: Use tiny to post with modal window
 In order to check if MathType formula can be displayed correctly
 I need to post a MathType formula
