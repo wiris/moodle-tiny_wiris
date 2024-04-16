@@ -1,4 +1,4 @@
-@editor @editor_tiny @tiny_wiris @tiny_wiris_current @wiris_mathtype
+@tiny @tiny_wiris @tiny_wiris_current @wiris_mathtype
 Feature: Check the Mathtype and chemtype buttons visibility on text editors
 In order to check the buttons visibility in tinymce editor
 As an admin
