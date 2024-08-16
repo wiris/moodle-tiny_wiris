@@ -1,4 +1,4 @@
-name: Moodle Plugin CI Code Lint for WIRIS_Moodle_Tiny
+name: Moodle Plugin CI Code Lint
 on:
   push:
   workflow_dispatch:
@@ -68,7 +68,7 @@ jobs:
         run: moodle-plugin-ci phpcpd ./plugin
 
       - name: PHP Mess Detector
-        continue-on-error: true 
+        continue-on-error: true
         if: ${{ always() }}
         run: moodle-plugin-ci phpmd ./plugin
 
