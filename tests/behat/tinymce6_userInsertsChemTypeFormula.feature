@@ -25,6 +25,7 @@ I need to write a ChemType formula
     And I add a "Page" to section "0" using the activity chooser
     And I set the following fields to these values:
       | Name | Test MathType for TinyMCE6 on Moodle chemistry formulas |
+    And I press "Toggle" in "Page content" field in TinyMCE 6 editor
     And I press "ChemType" in "Page content" field in TinyMCE 6 editor
     And I wait until MathType editor is displayed
     And I set MathType formula to '<math><mi mathvariant="normal">H</mi><mn>2</mn><mi mathvariant="normal">O</mi></math>'

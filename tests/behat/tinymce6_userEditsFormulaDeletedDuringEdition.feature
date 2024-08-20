@@ -27,6 +27,7 @@ Feature: User edits deleted formula
     And I set the following fields to these values:
       | Name | Test MathType for TinyMCE6 on Moodle chemistry formulas |
     # Insert formula.
+    And I press "Toggle" in "Page content" field in TinyMCE 6 editor
     And I press "MathType" in "Page content" field in TinyMCE 6 editor
     And I wait until MathType editor is displayed
     And I wait "3" seconds
@@ -60,6 +61,7 @@ Feature: User edits deleted formula
     And I set the following fields to these values:
       | Name | Test MathType for TinyMCE6 on Moodle chemistry formulas |
     # Insert formula.
+    And I press "Toggle" in "Page content" field in TinyMCE 6 editor
     And I press "MathType" in "Page content" field in TinyMCE 6 editor
     And I wait until MathType editor is displayed
     And I wait "2" seconds

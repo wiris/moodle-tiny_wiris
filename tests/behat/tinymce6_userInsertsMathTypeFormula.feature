@@ -25,6 +25,7 @@ Feature: Insert MathType formula
     And I add a "Page" to section "0" using the activity chooser
     And I set the following fields to these values:
       | Name | Test WirisFormula for Atto on Moodle |
+    And I press "Toggle" in "Page content" field in TinyMCE 6 editor
     And I press "MathType" in "Page content" field in TinyMCE 6 editor
     And I wait until MathType editor is displayed
     And I wait "2" seconds
@@ -42,6 +43,7 @@ Feature: Insert MathType formula
     And I add a "Page" to section "0" using the activity chooser
     And I set the following fields to these values:
       | Name | Test WirisFormula for Atto on Moodle |
+    And I press "Toggle" in "Page content" field in TinyMCE 6 editor
     And I press "MathType" in "Page content" field in TinyMCE 6 editor
     And I wait until MathType editor is displayed
     And I wait "2" seconds

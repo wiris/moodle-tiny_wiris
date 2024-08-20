@@ -33,6 +33,7 @@ Feature: Edit LaTeX formula with MathType editor
     And I place caret at position "2" in "Page Content" field in TinyMCE 6
     # Return to the default frame to check if MathType editor opened
     And I return to default frame
+    And I press "Toggle" in "Page content" field in TinyMCE 6 editor
     And I press "MathType" in "Page content" field in TinyMCE 6 editor
     And I wait until MathType editor is displayed
     And I set MathType formula to '<math><mfrac><mn>1</mn><msqrt><mn>2</mn><mi>&#x3c0;</mi></msqrt></mfrac></math>'
@@ -57,6 +58,7 @@ Feature: Edit LaTeX formula with MathType editor
       | Page content | $\frac{x+3}{y-2}=c^2$              |
     And I click on "Page content" field
     And I place caret at position "2" in "Page content" field
+    And I press "Toggle" in "Page content" field in TinyMCE 6 editor
     And I press "MathType" in "Page content" field in TinyMCE 6 editor
     And I wait until MathType editor is displayed
     And I set MathType formula to '<math><mfrac><mn>1</mn><msqrt><mn>2</mn><mi>&#x3c0;</mi></msqrt></mfrac></math>'

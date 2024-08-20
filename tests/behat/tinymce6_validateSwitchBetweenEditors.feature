@@ -25,6 +25,7 @@ Feature: MathType and ChemType editor switch
     And I add a "Page" to section "0" using the activity chooser
     And I set the following fields to these values:
       | Name | Test switching between editors |
+    And I press "Toggle" in "Page content" field in TinyMCE 6 editor
     And I press "ChemType" in "Page content" field in TinyMCE 6 editor
     And I wait until MathType editor is displayed
     And I press cancel button in MathType Editor
@@ -44,6 +45,7 @@ Feature: MathType and ChemType editor switch
     And I add a "Page" to section "0" using the activity chooser
     And I set the following fields to these values:
       | Name | Test switching between editors |
+    And I press "Toggle" in "Page content" field in TinyMCE 6 editor
     And I press "MathType" in "Page content" field in TinyMCE 6 editor
     And I wait until MathType editor is displayed
     And I press cancel button in MathType Editor
@@ -63,6 +65,7 @@ Feature: MathType and ChemType editor switch
     And I add a "Page" to section "0"
     And I set the following fields to these values:
       | Name | Test switching between editors |
+    And I press "Toggle" in "Page content" field in TinyMCE 6 editor
     And I press "ChemType" in "Page content" field in TinyMCE 6 editor
     And I wait until MathType editor is displayed
     And I press cancel button in MathType Editor
@@ -82,6 +85,7 @@ Feature: MathType and ChemType editor switch
     And I add a "Page" to section "0"
     And I set the following fields to these values:
       | Name | Test switching between editors |
+    And I press "Toggle" in "Page content" field in TinyMCE 6 editor
     And I press "MathType" in "Page content" field in TinyMCE 6 editor
     And I wait until MathType editor is displayed
     And I press cancel button in MathType Editor
