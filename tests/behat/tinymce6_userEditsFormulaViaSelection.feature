@@ -41,7 +41,6 @@ Background:
     And I click on WirisFormula with alt equals to "1 plus 1"
     ## Return to the default frame to click on the MathType editor button
     And I return to default frame
-    And I press "Toggle" in "Page content" field in TinyMCE 6 editor
     And I press "MathType" in "Page content" field in TinyMCE 6 editor
     And I wait until MathType editor is displayed
     And I wait "3" seconds
