@@ -47,6 +47,7 @@ Feature: Insert equations containing sensible symbols
     And I add a "Page" to section "0" using the activity chooser
     And I set the following fields to these values:
       | Name | Test MathType for TinyMCE6 on Moodle |
+    And I press "Toggle" in "Page content" field in TinyMCE 6 editor
     And I press "MathType" in "Page content" field in TinyMCE 6 editor
     And I wait until MathType editor is displayed
     And I wait "5" seconds
@@ -85,6 +86,7 @@ Feature: Insert equations containing sensible symbols
     And I add a "Page" to section "0"
     And I set the following fields to these values:
       | Name | Test MathType for TinyMCE6 on Moodle |
+    And I press "Toggle" in "Page content" field in TinyMCE 6 editor
     And I press "MathType" in "Page content" field in TinyMCE 6 editor
     And I wait until MathType editor is displayed
     And I wait "5" seconds
