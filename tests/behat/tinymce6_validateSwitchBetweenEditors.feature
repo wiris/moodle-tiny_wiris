@@ -27,8 +27,7 @@ Feature: MathType and ChemType editor switch
       | Name | Test switching between editors |
     And I press "Toggle" in "Page content" field in TinyMCE 6 editor
     And I press "ChemType" in "Page content" field in TinyMCE 6 editor
-    And I wait until MathType editor is displayed
-    And I press cancel button in MathType Editor
+    And I wait until ChemType editor is displayed
     And I press "MathType" in "Page content" field in TinyMCE 6 editor
     And I wait until MathType editor is displayed
     And I set MathType formula to '<math><mfrac><mn>1</mn><msqrt><mn>2</mn><mi>&#x3c0;</mi></msqrt></mfrac></math>'
@@ -48,9 +47,8 @@ Feature: MathType and ChemType editor switch
     And I press "Toggle" in "Page content" field in TinyMCE 6 editor
     And I press "MathType" in "Page content" field in TinyMCE 6 editor
     And I wait until MathType editor is displayed
-    And I press cancel button in MathType Editor
     And I press "ChemType" in "Page content" field in TinyMCE 6 editor
-    And I wait until MathType editor is displayed
+    And I wait until ChemType editor is displayed
     And I set MathType formula to '<math><mi mathvariant="normal">H</mi><mn>2</mn><mi mathvariant="normal">O</mi></math>'
     And I press accept button in MathType Editor
     And I press "Save and display"
@@ -67,8 +65,7 @@ Feature: MathType and ChemType editor switch
       | Name | Test switching between editors |
     And I press "Toggle" in "Page content" field in TinyMCE 6 editor
     And I press "ChemType" in "Page content" field in TinyMCE 6 editor
-    And I wait until MathType editor is displayed
-    And I press cancel button in MathType Editor
+    And I wait until ChemType editor is displayed
     And I press "MathType" in "Page content" field in TinyMCE 6 editor
     And I wait until MathType editor is displayed
     And I set MathType formula to '<math><mfrac><mn>1</mn><msqrt><mn>2</mn><mi>&#x3c0;</mi></msqrt></mfrac></math>'
@@ -88,9 +85,8 @@ Feature: MathType and ChemType editor switch
     And I press "Toggle" in "Page content" field in TinyMCE 6 editor
     And I press "MathType" in "Page content" field in TinyMCE 6 editor
     And I wait until MathType editor is displayed
-    And I press cancel button in MathType Editor
     And I press "ChemType" in "Page content" field in TinyMCE 6 editor
-    And I wait until MathType editor is displayed
+    And I wait until ChemType editor is displayed
     And I set MathType formula to '<math><mi mathvariant="normal">H</mi><mn>2</mn><mi mathvariant="normal">O</mi></math>'
     And I press accept button in MathType Editor
     And I press "Save and display"
