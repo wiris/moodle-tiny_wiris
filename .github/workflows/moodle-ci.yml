@@ -2,6 +2,7 @@ name: Moodle Plugin CI Tests
 
 # The workflow is triggered on push to the stable branch, main branch, pull requests and every day at 6:30 UTC.
 on:
+  workflow_dispatch:
   push:
     branches:
       - stable
@@ -128,7 +129,7 @@ jobs:
       - name: Add MathType filter plugin using the stable branch
         if: steps.install-plugin-filter.outcome != 'success'
         run: |
-          moodle-plugin-ci add-plugin --branch stable wiris/moodle-filter_wiris
+          moodle-plugin-ci add-plugin --branch main wiris/moodle-filter_wiris
 
       # 3.2 Install Atto plugin
       - name: Add MathType plugin for Atto
@@ -139,7 +140,7 @@ jobs:
       - name: Add MathType plugin for Atto using the stable branch
         if: steps.install-plugin-atto.outcome != 'success'
         run: |
-          moodle-plugin-ci add-plugin --branch stable wiris/moodle-atto_wiris
+          moodle-plugin-ci add-plugin --branch main wiris/moodle-atto_wiris
 
       # 3.3 Install Tiny plugin ( Not used )
 
