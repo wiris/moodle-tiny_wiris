@@ -3,6 +3,11 @@ name: Moodle Plugin CI Tests
 # The workflow is triggered on push to the stable branch, main branch, pull requests and every day at 6:30 UTC.
 on:
   workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Adds an additional tags to the tests. It needs the && to concat other tags and a starting @. Usage: "&&@mtmoodle-x"'
+        required: false
+        default: ''
   push:
     branches:
       - stable
@@ -36,6 +41,7 @@ jobs:
             "MOODLE_402_STABLE",
             "MOODLE_403_STABLE",
             "MOODLE_404_STABLE",
+            "main",
           ]
         database: [pgsql]
         browser: ["chrome", "firefox"]
@@ -49,13 +55,19 @@ jobs:
             php: "7.4"
           - moodle-branch: "MOODLE_404_STABLE"
             php: "7.4"
+          - moodle-branch: "main"
+            php: "7.4"
 
           - moodle-branch: "MOODLE_404_STABLE"
+            php: "8.0"
+          - moodle-branch: "main"
             php: "8.0"
 
           - moodle-branch: "MOODLE_400_STABLE"
             php: "8.2"
           - moodle-branch: "MOODLE_401_STABLE"
+            php: "8.2"
+          - moodle-branch: "main"
             php: "8.2"
 
           - moodle-branch: "MOODLE_401_STABLE"
@@ -63,6 +75,8 @@ jobs:
           - moodle-branch: "MOODLE_402_STABLE"
             php: "8.3"
           - moodle-branch: "MOODLE_403_STABLE"
+            php: "8.3"
+          - moodle-branch: "main"
             php: "8.3"
 
     steps:
@@ -126,7 +140,7 @@ jobs:
         continue-on-error: true
         run: |
           moodle-plugin-ci add-plugin --branch ${{ env.BRANCH_NAME }} wiris/moodle-filter_wiris
-      - name: Add MathType filter plugin using the stable branch
+      - name: Add MathType filter plugin using the main branch
         if: steps.install-plugin-filter.outcome != 'success'
         run: |
           moodle-plugin-ci add-plugin --branch main wiris/moodle-filter_wiris
@@ -137,7 +151,7 @@ jobs:
         continue-on-error: true
         run: |
           moodle-plugin-ci add-plugin --branch ${{ env.BRANCH_NAME }} wiris/moodle-atto_wiris
-      - name: Add MathType plugin for Atto using the stable branch
+      - name: Add MathType plugin for Atto using the main branch
         if: steps.install-plugin-atto.outcome != 'success'
         run: |
           moodle-plugin-ci add-plugin --branch main wiris/moodle-atto_wiris
@@ -151,7 +165,7 @@ jobs:
         continue-on-error: true
         run: |
           moodle-plugin-ci add-plugin --branch ${{ env.BRANCH_NAME }} wiris/moodle-qtype_wq
-      - name: Add Wiris Quizzes plugin using the stable branch
+      - name: Add Wiris Quizzes plugin using the main branch
         if: steps.install-plugin-quizzes.outcome != 'success'
         run: |
           moodle-plugin-ci add-plugin --branch main wiris/moodle-qtype_wq
@@ -196,7 +210,7 @@ jobs:
               TAG="@tinymce6"
               ;;
           esac
-          moodle-plugin-ci behat --tags=$TAG --profile ${{ matrix.browser }} --auto-rerun=2 --verbose -vvv
+          moodle-plugin-ci behat --tags=$TAG${{ github.event.inputs.tags }} --profile ${{ matrix.browser }} --auto-rerun=2 --verbose -vvv
 
       - name: Upload Behat Faildump
         if: ${{ failure() && steps.behat.outcome == 'failure' }}
@@ -204,5 +218,5 @@ jobs:
         with:
           name: Behat Faildump (${{ join(matrix.*, ', ') }})
           path: ${{ github.workspace }}/moodledata/behat_dump
-          retention-days: 7
+          retention-days: 1
           if-no-files-found: ignore
