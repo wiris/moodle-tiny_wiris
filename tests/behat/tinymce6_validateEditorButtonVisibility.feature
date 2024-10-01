@@ -34,6 +34,7 @@ I need to change the settings on the filter wiris
     And I press "Save changes"
     And I am on "Course 1" course homepage with editing mode on
     And I add a "Page" to section "0" using the activity chooser
+    And I press "Toggle" in "Page content" field in TinyMCE 6 editor
     Then I check "MathType" in "Page content" field "does not" exist in TinyMCE editor
     And I check "ChemType" in "Page content" field "does" exist in TinyMCE editor
 
@@ -52,6 +53,7 @@ I need to change the settings on the filter wiris
     And I press "Save changes"
     And I am on "Course 1" course homepage with editing mode on
     And I add a "Page" to section "0" using the activity chooser
+    And I press "Toggle" in "Page content" field in TinyMCE 6 editor
     Then I check "MathType" in "Page content" field "does" exist in TinyMCE editor
     And I check "ChemType" in "Page content" field "does not" exist in TinyMCE editor
 
@@ -72,6 +74,7 @@ I need to change the settings on the filter wiris
     And the "wiris" filter is "off"
     And I am on "Course 1" course homepage with editing mode on
     And I add a "Page" to section "0" using the activity chooser
+    And I press "Toggle" in "Page content" field in TinyMCE 6 editor
     Then I check "MathType" in "Page content" field "does" exist in TinyMCE editor
     Then I check "ChemType" in "Page content" field "does" exist in TinyMCE editor
 
