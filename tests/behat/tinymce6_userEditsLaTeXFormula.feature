@@ -16,7 +16,7 @@ Feature: Edit LaTeX formula with MathType editor
     And the "urltolink" filter is "off"
     And I log in as "admin"
 
-  @javascript @4.x @4
+  @javascript @4.x @4 @4.x_tinymce6
   Scenario: MTMOODLE-38 - User edits a LaTeX formula
     And I navigate to "General > Security > Site security settings" in site administration
     And I check enable trusted content
@@ -26,13 +26,13 @@ Feature: Edit LaTeX formula with MathType editor
     And I set the following fields to these values:
       | Name         | Test MathType for TinyMCE6 on Moodle |
       | Description  | ejemplo                              |
-      | Page content | $\frac{x+3}{y-2}=c^2$              |
+      | Page content | $$\frac{x+3}{y-2}=c^2$$              |
     # Go to the editor's iframe to select the wirisformula
     And I switch to iframe with locator "id_page_ifr"
     And I click on "Page content" field in TinyMCE 6
+    And I return to default frame
     And I place caret at position "2" in "Page Content" field in TinyMCE 6
     # Return to the default frame to check if MathType editor opened
-    And I return to default frame
     And I press "Toggle" in "Page content" field in TinyMCE 6 editor
     And I press "MathType" in "Page content" field in TinyMCE 6 editor
     And I wait until MathType editor is displayed
@@ -40,10 +40,13 @@ Feature: Edit LaTeX formula with MathType editor
     And I wait "1" seconds
     And I press accept button in MathType Editor
     And I wait "1" seconds
+    And I switch to iframe with locator "id_page_ifr"
     Then "$$\frac1{\sqrt{2\pi}}$$" "text" should exist
+    And I return to default frame
     And I press "Save and display"
     And I wait "1" seconds
     And I navigate to "Settings" in current page administration
+    And I switch to iframe with locator "id_page_ifr"
     Then "$$\frac1{\sqrt{2\pi}}$$" "text" should exist
 
   @javascript @4.0 @4.0_tinymce6
