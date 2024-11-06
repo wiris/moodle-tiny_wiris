@@ -27,7 +27,7 @@ $ cd <your-moodle-root-path>
 $ git clone https://github.com/wiris/moodle-tiny_wiris.git lib/editor/tiny/plugins/wiris
 ```
 
-Alternatively, you can [download the plugin](https://github.com/wiris/moodle-tinymce_tiny_mce_wiris/archive/stable.zipx) and unzip the file into the Tiny plugins folder, and then rename the new folder to `wiris`.
+Alternatively, you can [download the plugin](https://github.com/wiris/moodle-tinymce_tiny_mce_wiris/archive/main.zipx) and unzip the file into the Tiny plugins folder, and then rename the new folder to `wiris`.
 
 ## Releases
 
