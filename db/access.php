@@ -36,6 +36,6 @@ $capabilities = [
             'student' => CAP_ALLOW,
             'guest' => CAP_ALLOW,
             'user' => CAP_ALLOW,
-        ]
-    ]
+        ],
+    ],
 ];
