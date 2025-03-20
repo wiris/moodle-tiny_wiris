@@ -14,7 +14,7 @@ on:
       - main
   pull_request:
     branches:
-      - "*"
+      - "**"
   schedule:
     - cron: "30 6 * * *"
 
@@ -75,8 +75,6 @@ jobs:
           - moodle-branch: "MOODLE_400_STABLE"
             php: "8.2"
           - moodle-branch: "MOODLE_401_STABLE"
-            php: "8.2"
-          - moodle-branch: "main"
             php: "8.2"
 
           - moodle-branch: "MOODLE_401_STABLE"
@@ -154,12 +152,13 @@ jobs:
 
       # 3.2 Install Atto plugin
       - name: Add MathType plugin for Atto
+        if: ${{ matrix.moodle-branch != 'main' }}
         id: install-plugin-atto
         continue-on-error: true
         run: |
           moodle-plugin-ci add-plugin --branch ${{ env.BRANCH_NAME }} wiris/moodle-atto_wiris
       - name: Add MathType plugin for Atto using the main branch
-        if: steps.install-plugin-atto.outcome != 'success'
+        if: ${{ steps.install-plugin-atto.outcome != 'success' && matrix.moodle-branch != 'main' }}
         run: |
           moodle-plugin-ci add-plugin --branch main wiris/moodle-atto_wiris
 
@@ -210,8 +209,11 @@ jobs:
             "MOODLE_400_STABLE")
               TAG="@4.0_tinymce6${{ github.event.inputs.tags }}"
               ;;
-            "MOODLE_401_STABLE"|"MOODLE_402_STABLE"|"MOODLE_403_STABLE"|"MOODLE_404_STABLE"|"MOODLE_405_STABLE"|"main")
+            "MOODLE_401_STABLE"|"MOODLE_402_STABLE"|"MOODLE_403_STABLE"|"MOODLE_404_STABLE"|"MOODLE_405_STABLE")
               TAG="@4.x_tinymce6${{ github.event.inputs.tags }}"
+              ;;
+            "main")
+              TAG="@5.x_tinymce6${{ github.event.inputs.tags }}"
               ;;
             *)
               TAG="@tinymce6${{ github.event.inputs.tags }}"

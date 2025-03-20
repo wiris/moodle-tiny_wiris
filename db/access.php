@@ -15,14 +15,27 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'tiny_wiris', language 'en'.
+ * Capabilities for the tiny_equation plugin.
  *
- * @package    tiny_wiris
- * @subpackage tiny_mce_wiris
- * @copyright  WIRIS Europe (Maths for more S.L)
+ * @package    tiny_equation
+ * @copyright  2025 David Woloszyn <david.woloszyn@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-$string['pluginname'] = 'MathType by WIRIS';
-$string['error_connection'] = 'An error occurred while loading MathType';
-$string['privacy:metadata'] = 'MathType for TinyMCE does not effect or store any data itself.';
-$string['wiris:use'] = 'Use TinyMCE wiris plugin';
+
+defined('MOODLE_INTERNAL') || die();
+
+$capabilities = [
+    'tiny/wiris:use' => [
+        'captype' => 'read',
+        'contextlevel' => CONTEXT_SYSTEM,
+        'archetypes' => [
+            'manager' => CAP_ALLOW,
+            'coursecreator' => CAP_ALLOW,
+            'editingteacher' => CAP_ALLOW,
+            'teacher' => CAP_ALLOW,
+            'student' => CAP_ALLOW,
+            'guest' => CAP_ALLOW,
+            'user' => CAP_ALLOW,
+        ],
+    ],
+];
