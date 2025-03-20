@@ -76,8 +76,6 @@ jobs:
             php: "8.2"
           - moodle-branch: "MOODLE_401_STABLE"
             php: "8.2"
-          - moodle-branch: "main"
-            php: "8.2"
 
           - moodle-branch: "MOODLE_401_STABLE"
             php: "8.3"
@@ -211,8 +209,11 @@ jobs:
             "MOODLE_400_STABLE")
               TAG="@4.0_tinymce6${{ github.event.inputs.tags }}"
               ;;
-            "MOODLE_401_STABLE"|"MOODLE_402_STABLE"|"MOODLE_403_STABLE"|"MOODLE_404_STABLE"|"MOODLE_405_STABLE"|"main")
+            "MOODLE_401_STABLE"|"MOODLE_402_STABLE"|"MOODLE_403_STABLE"|"MOODLE_404_STABLE"|"MOODLE_405_STABLE")
               TAG="@4.x_tinymce6${{ github.event.inputs.tags }}"
+              ;;
+            "main")
+              TAG="@5.x_tinymce6${{ github.event.inputs.tags }}"
               ;;
             *)
               TAG="@tinymce6${{ github.event.inputs.tags }}"

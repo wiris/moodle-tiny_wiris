@@ -23,7 +23,7 @@ Feature: Insert a MathType formula in an assignment's feedbacks
     And the "urltolink" filter is "off"
     And I log in as "admin"
 
-  @javascript @4.x @4.x_tinymce6
+  @javascript @4.x @4.x_tinymce6 @5.x @5.x_tinymce6
   Scenario: MTMOODLE-98 - Insert a MathType formula in an assignment's feedback
     # 01. Create the assignment
     And I am on "Course 1" course homepage with editing mode on
