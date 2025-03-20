@@ -10,7 +10,7 @@ There is a clean environment Docker provided by the official Moodle team:
 
 - https://github.com/moodlehq/moodle-docker
 
-With the previous environment, you need have [MathType Moodle filter plugin](https://github.com/wiris/moodle-filter_wiris) installed in order to use this plugin.
+With the previous environment, you also need [MathType Moodle filter plugin](https://github.com/wiris/moodle-filter_wiris) installed in order to use this plugin.
 
 Otherwise, you can use the one created by WIRIS. It helps you install a Moodle instance on your computer with the WIRIS plugins suite installed and some dummy content.
 
@@ -30,7 +30,7 @@ $ git clone https://github.com/wiris/moodle-tiny_wiris.git lib/editor/tiny/plugi
 
 Alternatively, you can [download the plugin](https://github.com/wiris/moodle-tiny_wiris/archive/main.zip) and unzip the file into previous folder, then rename the new folder to `wiris`.
 
-## Dependencies of MathType filter
+## Dependencies of MathType Moodle plugin for TinyMCE
 
 This project contains the following external dependencies:
 

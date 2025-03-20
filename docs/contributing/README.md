@@ -1,4 +1,4 @@
-# Contributing to MathType filter
+# Contributing to MathType for TinyMCE
 
 We would love for you to contribute to this project and help make it better.
 
@@ -98,9 +98,9 @@ This project is strict with testing to ensure a good quality product. Each time 
 
 ## Software Dependencies Update Plan
 
-This project contains [dependencies](../environment/README.md#dependencies-of-mathtype-filter) from other company projects. Those are updated by the development team in charge of maintaining the MathType for TinyMCE on their own repositories.
+This project contains [dependencies](../environment/README.md#dependencies-of-mathType-moodle-plugin-for-tinyMCE) from other company projects. Those are updated by the development team in charge of maintaining the MathType for TinyMCE on their own repositories.
 
-The development team is also in charge of updating the versions used for the other projects. As soon as one of the dependencies releases a new version with changes related to the MathType filter, the development team will update it in this project.
+The development team is also in charge of updating the versions used for the other projects. As soon as one of the dependencies releases a new version with changes, the development team will update it in this project.
 
 > **Note:** More details on the `thirdpartylibs.xml` file.
 
