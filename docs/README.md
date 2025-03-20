@@ -1,80 +1,38 @@
-# {{title}}
+# ![MathType](../pix/logo-mathtype.png) MathType Moodle plugin for TinyMCE by WIRIS
 
-> **Mandatory section**
->
-> Here you must provide the repository description. Anyone should understand what's the repository about by only reading this section.
+[![Moodle Plugin CI](https://github.com/wiris/moodle-tinymce_tiny_mce_wiris/actions/workflows/moodle-ci.yml/badge.svg)](https://github.com/wiris/moodle-tinymce_tiny_mce_wiris/actions/workflows/moodle-ci.yml)
 
-This repository contains...
+This repository contains the MathType TinyMCE plugin for Moodle versions later than 4.2, which integrates WIRIS tools to enable users to type and handwrite mathematical notation in Moodle with MathType for TinyMCE editor.
 
-## How to develop {{title}}
+This plugin is part of the [WIRIS math & science](https://moodle.org/plugins/browse.php?list=set&id=66) set.
 
-> **Mandatory section**
+MathType services can be used for **free** up to a certain level of uses per natural year. Please read **license** conditions and prices at [MathType store](https://www.wiris.com/en/pricing/?utm_source=github&utm_medium=referral&utm_campaign=readme&utm_content=integrations).
 
-Before starting to develop {{title}}, please:
+## How to develop MathType Moodle plugin for TinyMCE
 
-1. Build the [Development Environment](./environment/README.md)
-2. Read the [Contributing guidelines](./contributing/README.md)
+Before starting to develop, please read the following guides:
 
-<!-- PRIVATE REPOSITORY -->
-## How to release {{title}}
+* [Building the Development Environment](./environment/README.md)
+* [Contributing guidelines](./contributing/README.md)
 
-> **Mandatory or Optional section**
->
-> If the outcome of the project is:
->
-> - A Component, maintain this section an explain how the Component is released in the `release/README.md` file.
-> - A Utility, this section is not the place to have this information, Utilities and Solutions uses documents in Google Drive due to the release process involves other department. But if the Utility is a very internal project and do not involves other departments, the release information can be placed here. If not, delete this section, the `release` folder and its contents.
+## How to use MathType Moodle plugin for TinyMCE
 
-- [Releasing {{title}}](./release/README.md)
-<!-- /PRIVATE REPOSITORY -->
-
-## How to use {{title}}
-
-> **Mandatory or Optional section**
->
-> If the outcome of the project is:
->
-> - A Component, maintain this section an explain how others could use the Component in the `usage/README.md` file.
-> - A Utility, this section is not the place to have the user manuals, Utilities and Solutions uses docs.wiris.com or documents in Google Drive due to the destination of the information, mainly, is an external customer. But if the Utility is a very internal project and do not involves people outside the company, the usage information can be placed here. If not, delete this section, the `usage` folder and its contents.
-
-- [Using {{title}}](./usage/README.md)
-
-## Misc
+- [Using MathType Moodle plugin for TinyMCE](./usage/README.md)
 
 ### Authors
 
-> **Mandatory section**
->
-> Here you must indicate the author/s of the repository and the different ways of contacting them.
-
-<!-- PRIVATE REPOSITORY -->
-This repository is maintained by {{authors}}. You can contact the authors in the following channels:
-
-- {{author-wiris-slack-channel-1}}
-- {{author-wiris-slack-channel-2}}
-- {{author-wiris-slack-channel-3}}
-
-Feel free to leave feedback, report bugs or just come to tell how cool this repository is.
-<!-- /PRIVATE REPOSITORY -->
-
-<!-- PUBLIC REPOSITORY -->
 This repository is maintained by Maths for More, S.L. Read [Issue reporting](./misc/ISSUE_REPORTING.md) document to know how to leave feedback or report bugs.
-<!-- /PUBLIC REPOSITORY -->
 
 ### Issue reporting
-
-> **Mandatory section**
 
 - [Issue reporting](./misc/ISSUE_REPORTING.md)
 
 ### Repository structure
 
-> **Mandatory section**
-
 - [Structure of the repository](./misc/STRUCTURE.md)
 
 ## Changelog
 
-> **Optional section**
+Since version 8.2.6, all notable changes to this project are documented in the [Changelog](./CHANGELOG.md) file.
 
-- [Changelog](./CHANGELOG.md)
+You can download any release of this plugin from the [Official Moodle's page](https://moodle.org/plugins/tiny_wiris).

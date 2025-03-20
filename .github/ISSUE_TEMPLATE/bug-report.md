@@ -18,7 +18,6 @@ _Which version of MathType for TinyMCE does this happen in?_
 
 _What is the relevant software and their versions?_
 
-- _Editor (Atto, TinyMCE)_
 - _Moodle version_
 - _PHP version_
 
