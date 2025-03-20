@@ -6,7 +6,7 @@
 Once the project has been opened, you will see the following structure:
 
 ```plain
-MathType filter
+MathType Moodle plugin for TinyMCE
 ├── .github         - contains Github Workflows used by Github Actions.
 ├── amd             - contains raw, modular JavaScript and compiled, optimized files. 
 ├── classes         - stores autoloaded PHP classes, allowing to load them without manual 

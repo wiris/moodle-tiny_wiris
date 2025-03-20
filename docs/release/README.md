@@ -1,4 +1,4 @@
-# Releasing MathType filter
+# Releasing MathType Moodle plugin for TinyMCE
 
 All the developments will be merged to the current release branch by the development team.
 
