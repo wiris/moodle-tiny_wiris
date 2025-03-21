@@ -33,6 +33,6 @@ This repository is maintained by Maths for More, S.L. Read [Issue reporting](./m
 
 ## Changelog
 
-Since version 8.2.6, all notable changes to this project are documented in the [Changelog](./CHANGELOG.md) file.
+All notable changes to this project are documented in the [Changelog](./CHANGELOG.md) file.
 
 You can download any release of this plugin from the [Official Moodle's page](https://moodle.org/plugins/tiny_wiris).

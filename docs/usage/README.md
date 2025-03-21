@@ -16,4 +16,4 @@ This plugin allows insert any mathematic expression into TinyMCE editor field. T
 
 Follow this [guideline offered by Moodle](https://docs.moodle.org/405/en/Installing_plugins#Installing_a_plugin) to learn how to install any plugin to a production environment.
 
-The Wiris [MathType plugin for TinyMCE](https://moodle.org/plugins/tiny_wiris) can be found on the Moodle plugins directory, or clicking on the previous link.
+The Wiris [MathType Moodle plugin for TinyMCE](https://moodle.org/plugins/tiny_wiris) can be found on the Moodle plugins directory, or clicking on the previous link.

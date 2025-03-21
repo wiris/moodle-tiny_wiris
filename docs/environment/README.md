@@ -4,7 +4,7 @@ This project can be run in two different environments. To run in a development e
 
 ## Requirements
 
-To use the TinyMCE editor's MathType and ChemType plugins for editing and generating mathematical expressions, you need to have a environment for a Moodle instance:
+To use the MathType for TinyMCE editor's MathType and ChemType toolbar buttons for editing and generating mathematical expressions, you need to have an environment for a Moodle instance:
 
 There is a clean environment Docker provided by the official Moodle team:
 
@@ -32,11 +32,10 @@ Alternatively, you can [download the plugin](https://github.com/wiris/moodle-tin
 
 ## Dependencies of MathType Moodle plugin for TinyMCE
 
-This project contains the following external dependencies:
+This project contains the following external dependency:
 
-* MathType Web Integration JavaScript SDK.
-* MathType Web Integration PHP library.
+* MathType Web Integration for TinyMCE.
 
-The **MathType Web Integration JavaScript SDK** is open source ([@wiris/html-integrations](https://github.com/wiris/html-integrations)) and is released under GNU GPLv3 license as a npm package: [@wiris/mathtype-html-integration-devkit](https://www.npmjs.com/package/@wiris/mathtype-html-integration-devkit).
+The **MathType Web Integration for TinyMCE** is open source ([@wiris/html-integrations](https://github.com/wiris/html-integrations/tree/master/packages/tinymce6)) and is released under GNU GPLv3 license as a npm package: [@wiris/mathtype-tinymce6](https://www.npmjs.com/package/@wiris/mathtype-tinymce6).
 
 **Note:** More details on the `thirdpartylibs.xml` file.

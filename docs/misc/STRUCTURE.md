@@ -15,5 +15,5 @@ MathType Moodle plugin for TinyMCE
 ├── js              - contains a minified script that registers and initializes the plugin
 ├── lang            - contains a file with a set of strings for english translation.
 ├── pix             - stores icons for plugins and the system.
-└── tests           - contains the behat tests for the plugin and steps implementation.
+└── tests           - contains the behat tests for the plugin.
 ```
