@@ -12,10 +12,6 @@ There is a clean environment Docker provided by the official Moodle team:
 
 With the previous environment, you also need [MathType Moodle filter plugin](https://github.com/wiris/moodle-filter_wiris) installed in order to use this plugin.
 
-Otherwise, you can use the one created by WIRIS. It helps you install a Moodle instance on your computer with the WIRIS plugins suite installed and some dummy content.
-
-- https://github.com/wiris/wiris-moodle-docker
-
 ## Development
 
 ### Install MathType Moodle plugin for TinyMCE
