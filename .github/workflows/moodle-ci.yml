@@ -42,6 +42,7 @@ jobs:
             "MOODLE_403_STABLE",
             "MOODLE_404_STABLE",
             "MOODLE_405_STABLE",
+            "MOODLE_500_STABLE",
             "main",
           ]
         database: [pgsql]
@@ -60,14 +61,20 @@ jobs:
             php: "7.4"
           - moodle-branch: "main"
             php: "7.4"
+          - moodle-branch: "MOODLE_500_STABLE"
+            php: "7.4"
 
           - moodle-branch: "MOODLE_404_STABLE"
             php: "8.0"
           - moodle-branch: "MOODLE_405_STABLE"
             php: "8.0"
+          - moodle-branch: "MOODLE_500_STABLE"
+            php: "8.0"
           - moodle-branch: "main"
             php: "8.0"
 
+          - moodle-branch: "MOODLE_500_STABLE"
+            php: "8.1"
           - moodle-branch: "main"
             php: "8.1"
 
@@ -212,7 +219,7 @@ jobs:
             "MOODLE_401_STABLE"|"MOODLE_402_STABLE"|"MOODLE_403_STABLE"|"MOODLE_404_STABLE"|"MOODLE_405_STABLE")
               TAG="@4.x_tinymce6${{ github.event.inputs.tags }}"
               ;;
-            "main")
+            "MOODLE_401_STABLE"|"main")
               TAG="@5.x_tinymce6${{ github.event.inputs.tags }}"
               ;;
             *)
