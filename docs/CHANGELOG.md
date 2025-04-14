@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v8.9.0 - 14 apr. 2025
+
+- feat: Add compatibility with Moodle 5.0.
+
 ## v8.8.3 - 1 jan. 2025
 - fix: Improve render services.
 
@@ -22,7 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## v8.7.0 - 23 apr. 2024
 - feat: Add compatibility with Moodle 4.4.
-  
+
 ## v8.6.3 - 26 mar. 2024
 - feat: Make MathType the default formula editor in Moodle
 
@@ -37,7 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
  - fix: MathType loading faster than TinyMCE. #KB-38924
  - feat: Add compatibility with Moodle 4.3
 
-## v8.4.0 - 31th jun. 2023
+## v9.0.0 - 31th jun. 2023
 - ci: Update how steps output are stored in Github actions.
 - fix: Moodle badge Certification Issues
 - docs: add how to update amd module section and enable dev mode
