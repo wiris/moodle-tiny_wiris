@@ -159,13 +159,13 @@ jobs:
 
       # 3.2 Install Atto plugin
       - name: Add MathType plugin for Atto
-        if: ${{ matrix.moodle-branch != 'main' }}
+        if: ${{ contains(fromJson('["MOODLE_38_STABLE", "MOODLE_39_STABLE", "MOODLE_311_STABLE", "MOODLE_400_STABLE", "MOODLE_401_STABLE", "MOODLE_402_STABLE", "MOODLE_403_STABLE", "MOODLE_404_STABLE", "MOODLE_405_STABLE"]'), matrix.moodle-branch) }}
         id: install-plugin-atto
         continue-on-error: true
         run: |
           moodle-plugin-ci add-plugin --branch ${{ env.BRANCH_NAME }} wiris/moodle-atto_wiris
       - name: Add MathType plugin for Atto using the main branch
-        if: ${{ steps.install-plugin-atto.outcome != 'success' && matrix.moodle-branch != 'main' }}
+        if: ${{contains(fromJson('["MOODLE_38_STABLE", "MOODLE_39_STABLE", "MOODLE_311_STABLE", "MOODLE_400_STABLE", "MOODLE_401_STABLE", "MOODLE_402_STABLE", "MOODLE_403_STABLE", "MOODLE_404_STABLE", "MOODLE_405_STABLE"]'), matrix.moodle-branch) && steps.install-plugin-atto.outcome != 'success' }}
         run: |
           moodle-plugin-ci add-plugin --branch main wiris/moodle-atto_wiris
 
@@ -219,7 +219,7 @@ jobs:
             "MOODLE_401_STABLE"|"MOODLE_402_STABLE"|"MOODLE_403_STABLE"|"MOODLE_404_STABLE"|"MOODLE_405_STABLE")
               TAG="@4.x_tinymce6${{ github.event.inputs.tags }}"
               ;;
-            "MOODLE_401_STABLE"|"main")
+            "MOODLE_500_STABLE"|"main")
               TAG="@5.x_tinymce6${{ github.event.inputs.tags }}"
               ;;
             *)
