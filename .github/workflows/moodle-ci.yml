@@ -84,7 +84,6 @@ jobs:
           - moodle_branch: "main"
             php: "8.1"
 
-
           - moodle_branch: "MOODLE_400_STABLE"
             php: "8.2"
           - moodle_branch: "MOODLE_401_STABLE"
@@ -170,7 +169,18 @@ jobs:
           CODECHECKER_IGNORE_PATHS: classes/privacy,ignore,node_modules,integration,render
           PHPUNIT_IGNORE_PATHS: classes/privacy,ignore,node_modules,integration,render
 
-      # 3. Install Atto MathType plugin for specific Moodle branches.
+      # 3 Install Filter plugin
+      - name: Add MathType filter plugin
+        id: install-plugin-filter
+        continue-on-error: true
+        run: |
+          moodle-plugin-ci add-plugin --branch ${{ env.BRANCH_NAME }} wiris/moodle-filter_wiris
+      - name: Add MathType filter plugin using the main branch
+        if: steps.install-plugin-filter.outcome != 'success'
+        run: |
+          moodle-plugin-ci add-plugin --branch main wiris/moodle-filter_wiris
+
+      # 4. Install Atto MathType plugin for specific Moodle branches.
       - name: Add MathType plugin for Atto
         if: ${{ contains(fromJson('["MOODLE_38_STABLE", "MOODLE_39_STABLE", "MOODLE_311_STABLE", "MOODLE_400_STABLE", "MOODLE_401_STABLE", "MOODLE_402_STABLE", "MOODLE_403_STABLE", "MOODLE_404_STABLE", "MOODLE_405_STABLE"]'), matrix.moodle_branch) }}
         id: install-plugin-atto
@@ -182,8 +192,6 @@ jobs:
         run: |
           moodle-plugin-ci add-plugin --branch main wiris/moodle-atto_wiris
 
-      # 4. Install TinyMCE MathType plugin for modern Moodle branches. (NOT NEEDED HERE BECAUSE IT IS ALREADY IN THE REPO)
-      
       # 5. Install Wiris Quizzes plugin.
       - name: Add Wiris Quizzes plugin
         id: install-plugin-quizzes
