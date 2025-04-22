@@ -92,7 +92,7 @@ jobs:
 
           - moodle_branch: "MOODLE_401_STABLE"
             php: "8.3"
-          - moodle_branch: "MOODLE_403_STABLE"
+          - moodle_branch: "MOODLE_402_STABLE"
             php: "8.3"
           - moodle_branch: "MOODLE_403_STABLE"
             php: "8.3"
