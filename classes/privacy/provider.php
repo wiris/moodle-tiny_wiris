@@ -22,7 +22,7 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace tinymce_tiny_mce_wiris\privacy;
+namespace tiny_wiris\privacy;
 
 /**
  * Privacy Subsystem for MathType TinyMCE plugin implementing null_provider.
