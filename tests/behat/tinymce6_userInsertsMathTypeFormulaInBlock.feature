@@ -20,18 +20,16 @@ Feature: Insert MathType formula in Block
     And I log in as "admin"
     And I am on "Course 1" course homepage with editing mode on
 
-  @javascript @5.x @5.x_tinymce6
+  @javascript @5.x @5.x_tinymce6 @wipdavid
   Scenario: MTMOODLE-109 - User inserts and render a Wiris formula in a block
-    # Add a block
-    And I add the "Text..." block
-    And I set the field "Content" to "First block content"
-    And I set the field "Text block title" to "First block header"
   # Add a block
     And I add the "Text..." block
     And I set the field "Content" to "First block content"
     And I set the field "Text block title" to "First block header"
   # Insert equation
     And I press "Toggle" in "Text Block" field in TinyMCE 6 editor
+    # Problem with a tooltip, so clicking on anywhere
+    And I click on "Align left" in TinyMCE 6 editor toolbar
     And I press "MathType" in "Text Block" field in TinyMCE 6 editor
     And I wait until MathType editor is displayed
     And I wait "2" seconds
