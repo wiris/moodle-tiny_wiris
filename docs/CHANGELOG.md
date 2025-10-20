@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## v8.10.0 - 08 oct. 2025
 
-- feat: Comaptibility with Moodle 5.1.
+- feat: Compatibility with Moodle 5.1.
 - fix: Tests.
 
 ## v8.9.2 - 10 jun. 2025
