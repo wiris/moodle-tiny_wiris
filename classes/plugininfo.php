@@ -49,12 +49,19 @@ class plugininfo extends plugin implements plugin_with_configuration {
         // We need to know if  MathType filter are active in the context of the course.
         // If not MathType for Atto should be disabled.
         $filterwirisactive = true;
+
         // Get MathType and Chemistry buttons enabled configuration.
         $editorisactive = get_config('filter_wiris', 'editor_enable') === '1';
         $chemistryisactive = get_config('filter_wiris', 'chem_editor_enable') === '1';
+
+        // Get replace tiny equation editor configuration.
+        $replacetinyequation = get_config('tiny_wiris', 'replacetinyequation') === '1';
+
+        // Get active filters in the context.
+        $activefilters = filter_get_active_in_context($context);
+
         // Filter disabled at course level.
         if (!get_config('filter_wiris', 'allow_editorplugin_active_course')) {
-            $activefilters = filter_get_active_in_context($context);
             $filterwirisactive = array_key_exists('wiris', $activefilters);
 
             // Filter disabled at activity level.
@@ -74,10 +81,18 @@ class plugininfo extends plugin implements plugin_with_configuration {
             }
         }
 
+        // Filter of MathType is disabled at course level.
+        if (!array_key_exists('mathjaxloader', $activefilters)) {
+            // We will always replace the default tiny equation editor if the filter is not active.
+            // Found that not adding this will make the tiny equation editor appear.
+            $replacetinyequation = true;
+        }
+
         return [
             'filterEnabled' => $filterwirisactive,
             'editorEnabled' => $editorisactive,
             'chemistryEnabled' => $chemistryisactive,
+            'replaceTinyEquation' => $replacetinyequation,
             'moodleCourseCategory' => $COURSE->category,
             'moodleCourseName' => $COURSE->fullname,
             'moodleVersion' => $CFG->branch,

@@ -13,22 +13,25 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-//
 
 /**
- * Version details.
+ * Tiny wiris settings file.
  *
- * @package    tiny_wiris
- * @subpackage tiny_mce_wiris
- * @copyright  WIRIS Europe (Maths for more S.L)
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package     tiny_wiris
+ * @copyright   WIRIS Europe (Maths for more S.L)
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = 2025102002;
-$plugin->release = '8.10.1';
-$plugin->requires = 2022112821.00;
-$plugin->component = 'tiny_wiris';
-$plugin->dependencies = ['filter_wiris' => 2025102000];
-$plugin->maturity = MATURITY_STABLE;
+$ADMIN->add('editortiny', new admin_category('tiny_wiris', get_string('pluginname', 'tiny_wiris')));
+
+$settings = new admin_settingpage('tiny_wiris_settings', get_string('settings', 'tiny_wiris'));
+if ($ADMIN->fulltree) {
+    $settings->add(new admin_setting_configcheckbox(
+            'tiny_wiris/replacetinyequation',
+            get_string('replacetinyequation', 'tiny_wiris'),
+            get_string('replacetinyequation_desc', 'tiny_wiris'),
+            1
+    ));
+}

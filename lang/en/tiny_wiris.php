@@ -23,6 +23,9 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 $string['pluginname'] = 'MathType by WIRIS';
+$string['settings'] = 'MathType by WIRIS Settings';
+$string['replacetinyequation'] = 'Replace default equation editor';
+$string['replacetinyequation_desc'] = 'If enabled the default equation editor is replaced by MathType by WIRIS. Otherwise, both editors are available.';
 $string['error_connection'] = 'An error occurred while loading MathType';
 $string['privacy:metadata'] = 'MathType for TinyMCE does not effect or store any data itself.';
 $string['wiris:use'] = 'Use TinyMCE wiris plugin';
