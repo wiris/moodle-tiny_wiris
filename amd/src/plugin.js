@@ -12,7 +12,7 @@ export default new Promise(async(resolve, reject) => {
         getTinyMCE(),
     ]);
 
-    // TThis uses editorUpload.addFilter(), which is TinyMCE's
+    // This uses editorUpload.addFilter(), which is TinyMCE's
     // built-in mechanism to exclude specific images from the scan/upload pipeline.
     // This filter runs at the ImageScanner level, so it prevents MathType images
     // from being touched by scanForImages(), uploadImagesAuto(), and uploadImages().
