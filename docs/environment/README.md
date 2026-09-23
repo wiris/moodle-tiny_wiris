@@ -18,13 +18,36 @@ With the previous environment, you also need [MathType Moodle filter plugin](htt
 
 Install the plugin like any other plugin in the folder `lib/editor/tiny/plugins/wiris`.
 
-You can use git:
+You can use git.
+
+For Moodle versions `< 5.1`, use:
 
 ```sh
-$ git clone https://github.com/wiris/moodle-tiny_wiris.git lib/editor/tiny/plugins/wiris
+git clone https://github.com/wiris/moodle-tiny_wiris.git lib/editor/tiny/plugins/wiris
+```
+
+For Moodle versions `>= 5.1`, use:
+
+```sh
+git clone https://github.com/wiris/moodle-tiny_wiris.git public/lib/editor/tiny/plugins/wiris
 ```
 
 Alternatively, you can [download the plugin](https://github.com/wiris/moodle-tiny_wiris/archive/main.zip) and unzip the file into previous folder, then rename the new folder to `wiris`.
+
+### Compile the AMD modules
+
+The JavaScript source files in `amd/src` must be compiled with Moodle Grunt. Compile them from a Moodle instance with this plugin installed. A standalone checkout of this plugin cannot run the build because Moodle provides the Gruntfile.js and JavaScript build dependencies.
+
+Go to the path in the Moodle installation where this plugin is installed and run:
+
+```sh
+npm install
+npx grunt amd
+```
+
+This compiles the plugin `amd/src/*.js` files into `amd/build/`. Replace this project files with the generated ones.
+
+> For details about Moodle Node.js and Grunt setup, see [Moodle developer documentation](https://moodledev.io/general/development/tools/nodejs).
 
 ## Dependencies of MathType Moodle plugin for TinyMCE
 
