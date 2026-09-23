@@ -32,24 +32,34 @@ export default new Promise(async(resolve, reject) => {
     const head = document.querySelector('head');
     let script = head.querySelector('script[data-mathtype="mathtype"]');
 
-    // If plugin.min.js file is already loaded, execute the init and resolve the promise
-    if (script) {
+    // If plugin.min.js file is already loaded, execute the init and resolve the promise.
+    // But a script tag may already exist while its async request is still ongoing.
+    // So, wait for it to finish before resolving the TinyMCE plugin import.
+    if (window.WirisPlugin) {
         resolve([`${component}/plugin`, Configuration]);
         return;
     }
 
-    script = document.createElement('script');
-    script.dataset.mathtype = 'mathtype';
-    script.src = `${baseUrl}/plugin.min.js`;
-    script.async = true;
+    if (!script) {
+        script = document.createElement('script');
+        script.dataset.mathtype = 'mathtype';
+        script.src = `${baseUrl}/plugin.min.js`;
+        script.async = true;
+    }
 
     script.addEventListener('load', () => {
-        resolve([`${component}/plugin`, Configuration]);
-    }, false);
+        if (window.WirisPlugin) {
+            resolve([`${component}/plugin`, Configuration]);
+        } else {
+            reject(new Error('MathType TinyMCE plugin loaded without registering WirisPlugin.'));
+        }
+    }, {once: true});
 
     script.addEventListener('error', (err) => {
         reject(err);
-    }, false);
+    }, {once: true});
 
-    head.append(script);
+    if (!script.isConnected) {
+        head.append(script);
+    }
 });
