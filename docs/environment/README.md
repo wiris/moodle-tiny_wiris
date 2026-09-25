@@ -50,7 +50,7 @@ npm install
 npx grunt amd
 ```
 
-This compiles the plugin `amd/src/*.js` files into `amd/build/`. Replace this project files with the generated ones.
+This compiles the plugin `amd/src/*.js` files into `amd/build/`. Replace these project files with the generated ones.
 
 > For details about Moodle Node.js and Grunt setup, see [Moodle developer documentation](https://moodledev.io/general/development/tools/nodejs).
 
