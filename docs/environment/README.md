@@ -32,7 +32,12 @@ For Moodle versions `>= 5.1`, use:
 git clone https://github.com/wiris/moodle-tiny_wiris.git public/lib/editor/tiny/plugins/wiris
 ```
 
-Alternatively, you can [download the plugin](https://github.com/wiris/moodle-tiny_wiris/archive/main.zip) and unzip the file into previous folder, then rename the new folder to `wiris`.
+Alternatively, [download the plugin](https://github.com/wiris/moodle-tiny_wiris/archive/main.zip) and unzip it into the appropriate parent folder:
+
+- Moodle `< 5.1`: `lib/editor/tiny/plugins/`
+- Moodle `>= 5.1`: `public/lib/editor/tiny/plugins/`
+
+Rename the extracted folder to `wiris`.
 
 ### Compile the AMD modules
 
